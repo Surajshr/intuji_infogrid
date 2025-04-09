@@ -2,7 +2,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:intuji_infogrid/core/constants/app_constants.dart';
 import 'package:intuji_infogrid/core/constants/environment_constant.dart';
 import 'package:intuji_infogrid/core/imports/ui_imports.dart';
-import 'package:intuji_infogrid/core/theme/app_theme.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:intuji_infogrid/route/app_route.dart';
 
