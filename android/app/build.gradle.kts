@@ -8,7 +8,9 @@ plugins {
 android {
     namespace = "com.example.intuji_infogrid"
     compileSdk = flutter.compileSdkVersion
-    ndkVersion = flutter.ndkVersion
+    ndkVersion = "27.0.12077973"
+     //  ndkVersion = "25.1.8937393"
+
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
@@ -36,7 +38,38 @@ android {
             // Signing with the debug keys for now, so `flutter run --release` works.
             signingConfig = signingConfigs.getByName("debug")
         }
+        debug {
+            signingConfig = signingConfigs.getByName("debug")
+        }
     }
+    flavorDimensions += "default"
+    productFlavors {
+        create("uat") {
+            dimension = "default"
+            applicationIdSuffix = ".uat"
+            resValue(
+                type = "string",
+                name = "app_name",
+                value = "[UAT]Info Grid")
+        }
+        create("prod") {
+            dimension = "default"
+            applicationIdSuffix = ""
+            resValue(
+                type = "string",
+                name = "app_name",
+                value = "Info Grid")
+        }
+        create("dev") {
+            dimension = "default"
+            applicationIdSuffix = ".dev"
+            resValue(
+                type = "string",
+                name = "app_name",
+                value = "[DEV]Info Grid")
+        }
+    }
+
 }
 
 flutter {

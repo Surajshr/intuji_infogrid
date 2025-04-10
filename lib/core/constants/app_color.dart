@@ -10,9 +10,5 @@ class AppColor {
   static const kTextColor = Color(0xFF000000);
   static const kErrorColor = Color.fromARGB(255, 255, 1, 1);
 
-  static const kGradientColors = [
-    Color(0xFFbae6fd), // Primary yellow
-    Color(0xFFd9f99f), // Light yellow
-    // Secondary cream
-  ];
+  static const kGradientColors = [Color(0xFFbae6fd), Color(0xFFd9f99f)];
 }
