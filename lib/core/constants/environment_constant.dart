@@ -7,22 +7,24 @@ abstract class Environment {
 class EnvironmentConstants {
   static late String baseUrl = '';
 
-  static late String firebaseDatabaseUrl = '';
-
   static void setEnvVariables(String env) {
     switch (env) {
       case Environment.dev:
-        baseUrl = 'Example.com';
-        firebaseDatabaseUrl = 'Example.com';
+        baseUrl = 'https://api.intuji_dev.com/';
 
         //urls depend on dev  env
         break;
       case Environment.prod:
+        baseUrl = 'https://api.intuji.com/';
         //urls depend on prod env
         break;
+      case Environment.uat:
+        baseUrl = 'https://api.intuji_uat.com/';
+        //urls depend on uat env
+        break;
       default:
-        baseUrl = 'Example.com';
-        firebaseDatabaseUrl = 'Example.com';
+        baseUrl = 'https://api.intuji_dev.com/';
+
         break;
     }
   }

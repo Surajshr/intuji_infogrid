@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:intuji_infogrid/core/constants/app_color.dart';
+import 'package:intuji_infogrid/core/constants/app_colors.dart';
+import 'package:intuji_infogrid/core/constants/app_constants.dart';
 
 class AppButton extends StatelessWidget {
   const AppButton({
     required this.text,
     super.key,
-    this.elevation,
+    this.elevation = 1,
     this.onPressed,
     this.buttonColor,
     this.width,
@@ -34,10 +35,10 @@ class AppButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       width: width ?? double.infinity,
-      height: height ?? 56.h,
+      height: height ?? 68.h,
       child: ElevatedButton(
         style: ButtonStyle(
-          elevation: WidgetStatePropertyAll(elevation ?? 0),
+          elevation: WidgetStatePropertyAll(elevation),
           backgroundColor: WidgetStateProperty.resolveWith<Color?>((
             Set<WidgetState> states,
           ) {
@@ -49,12 +50,14 @@ class AppButton extends StatelessWidget {
           foregroundColor: WidgetStateProperty.resolveWith<Color?>((
             Set<WidgetState> states,
           ) {
-            if (states.contains(WidgetState.disabled)) return Colors.white;
+            if (states.contains(WidgetState.disabled)) {
+              return AppColor.kWhiteColor;
+            }
             return null; // Defer to the widget's default.
           }),
           shape: WidgetStateProperty.resolveWith(
             (states) => RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(borderRadius ?? 32.r),
+              borderRadius: BorderRadius.circular(borderRadius ?? 8.r),
               side:
                   buttonBorderColor != null
                       ? BorderSide(color: buttonBorderColor!)
@@ -74,7 +77,8 @@ class AppButton extends StatelessWidget {
                   text,
                   style:
                       textStyle ??
-                      Theme.of(context).textTheme.bodyMedium?.copyWith(
+                      TextStyle(
+                        fontFamily: AppConstants.kFontFamily,
                         fontSize: 18.sp,
                         fontWeight: FontWeight.w700,
                         color: AppColor.kTextColor,

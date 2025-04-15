@@ -1,5 +1,10 @@
 {
     "@@locale": "ne",
-    "counterAppBarTitle": "काउन्टर"
-   
+    "signIn": "साइन इन",
+    "forgetPasswordQuestion":"आफ्नो पासवर्ड बिर्सनुभयो?",
+    "forgetPassword":"आफ्नो पासवर्ड बिर्सनुभयो",
+    "emailOrUsername":"इमेल वा प्रयोगकर्ता नाम",
+    "password":"PASSWORD",
+    "continueText":"जारी राख्नुहोस्"
+
 }
