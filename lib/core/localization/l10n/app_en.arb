@@ -5,7 +5,11 @@
     "forgetPassword":"Forget Password",
     "emailOrUsername":"EMAIL OR USERNAME",
     "password":"PASSWORD",
-    "continueText":"CONTINUE"
+    "continueText":"CONTINUE",
+    "totalQuotes":"Total Quotes",
+    "totalOrders":"Total Orders",
+    "value":"Value",
+    "somethingWentWrong":"Something Went Wrong, Please try again."
     
    
 }
