@@ -1,7 +1,6 @@
 import 'package:dartz/dartz.dart';
 import 'package:intuji_infogrid/core/services/network_service/client/base_client.dart';
 import 'package:intuji_infogrid/core/utils/auth_utils.dart';
-import 'package:intuji_infogrid/feature/auth/domain/entities/user_entity.dart';
 import 'package:intuji_infogrid/feature/auth/domain/repository/auth_repo.dart';
 
 class AuthRepoImpl extends AuthRepo {

@@ -5,6 +5,9 @@ import 'package:intuji_infogrid/core/constants/environment_constant.dart';
 import 'package:intuji_infogrid/core/imports/ui_imports.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:intuji_infogrid/core/theme/app_theme.dart';
+import 'package:intuji_infogrid/feature/dashboard/presentation/logic/dashboard/dashboard_cubit.dart';
+import 'package:intuji_infogrid/feature/members/presentation/logic/member_cubit.dart';
+import 'package:intuji_infogrid/feature/product_detail/presentation/logic/product_detail_cubit.dart';
 import 'package:intuji_infogrid/feature/splash/presentation/logic/splash_cubit.dart';
 import 'package:intuji_infogrid/route/app_route.dart';
 
@@ -23,7 +26,12 @@ class App extends StatelessWidget {
         alignment: Alignment.topRight,
         children: [
           MultiBlocProvider(
-            providers: [BlocProvider(create: (context) => SplashCubit())],
+            providers: [
+              BlocProvider(create: (context) => SplashCubit()),
+              BlocProvider(create: (context) => DashboardCubit()),
+              BlocProvider(create: (context) => ProductDetailCubit()),
+              BlocProvider(create: (context) => MemberCubit()),
+            ],
             child: ScreenUtilInit(
               designSize: Size(AppConstants.kAppWidth, AppConstants.kAppHeight),
               minTextAdapt: true,

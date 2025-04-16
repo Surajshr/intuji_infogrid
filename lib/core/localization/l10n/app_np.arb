@@ -5,6 +5,10 @@
     "forgetPassword":"आफ्नो पासवर्ड बिर्सनुभयो",
     "emailOrUsername":"इमेल वा प्रयोगकर्ता नाम",
     "password":"PASSWORD",
-    "continueText":"जारी राख्नुहोस्"
+    "continueText":"जारी राख्नुहोस्",
+    "totalQuotes":"कुल उद्धरणहरू",
+    "totalOrders":"कुल आदेश",
+    "value":"मूल्य",
+    "somethingWentWrong":"केही गडबड भयो, कृपया फेरि प्रयास गर्नुहोस्।"
 
 }

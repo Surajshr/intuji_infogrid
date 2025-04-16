@@ -10,6 +10,7 @@ class AppTheme {
         color: AppColor.kPrimaryColor,
         circularTrackColor: AppColor.kPrimaryColorLight,
       ),
+      colorScheme: ColorScheme.fromSeed(seedColor: AppColor.kPrimaryColor),
     );
   }
 }
