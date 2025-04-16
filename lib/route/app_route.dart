@@ -4,6 +4,8 @@ class AppRoutes {
   const AppRoutes._();
   static const String splash = '/splash';
   static const String login = '/login';
+  static const String dashboard = '/dashboard';
+  static const String forgetPassword = '/forget-password';
 
   static Route<dynamic> onGenerateRoute(RouteSettings settings) {
     switch (settings.name) {
@@ -15,7 +17,14 @@ class AppRoutes {
         return MaterialPageRoute<dynamic>(
           builder: (_) => const LoginBaseScreen(),
         );
-
+      case dashboard:
+        return MaterialPageRoute<dynamic>(
+          builder: (_) => const DashboardBaseScreen(),
+        );
+      case forgetPassword:
+        return MaterialPageRoute<dynamic>(
+          builder: (_) => const ForgetPasswordBaseScreen(),
+        );
       default:
         return MaterialPageRoute<dynamic>(
           builder:

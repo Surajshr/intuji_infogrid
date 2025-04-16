@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:intuji_infogrid/core/constants/app_constants.dart';
 
 class BuildText extends StatelessWidget {
   const BuildText({
@@ -46,7 +47,7 @@ class BuildText extends StatelessWidget {
         overflow: TextOverflow.ellipsis,
         style: TextStyle(
           fontSize: fontSize,
-          fontFamily: 'Roboto',
+          fontFamily: AppConstants.kFontFamily,
           letterSpacing: letterSpacing,
           height: height,
           color: color ?? Colors.black,

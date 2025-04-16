@@ -1,5 +1,11 @@
 {
     "@@locale": "en",
-    "counterAppBarTitle": "Counter"
+    "signIn": "Sign In",
+    "forgetPasswordQuestion": "Forgot your password?",
+    "forgetPassword":"Forget Password",
+    "emailOrUsername":"EMAIL OR USERNAME",
+    "password":"PASSWORD",
+    "continueText":"CONTINUE"
+    
    
 }

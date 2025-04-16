@@ -8,33 +8,32 @@
             "name": "Dev",
             "request": "launch",
             "type": "dart",
-            "program": "lib/main_dev.dart"
+            "program": "lib/main_dev.dart",
+            "args": [
+                "--flavor",
+                "dev"
+            ]
         },
         {
             "name": "UAT",
             "request": "launch",
             "type": "dart",
-            "program": "lib/main_uat.dart"
+            "program": "lib/main_uat.dart",
+            "args": [
+                "--flavor",
+                "uat"
+            ]
         },
         {
             "name": "Prod",
             "request": "launch",
             "type": "dart",
-            "program": "lib/main_prod.dart"
+            "program": "lib/main_prod.dart",
+            "args": [
+                "--flavor",
+                "prod"
+            ]
         },
-        {
-            "name": "Profile Mode",
-            "request": "launch",
-            "type": "dart",
-            "flutterMode": "profile",
-            "program": "lib/main_prod.dart"
-        },
-        {
-            "name": "Release Mode",
-            "request": "launch",
-            "type": "dart",
-            "flutterMode": "release",
-            "program": "lib/main_prod.dart"
-        }
+        
     ]
 }
